@@ -85,11 +85,11 @@
             label = "NEW_MACROA";
         };
 
-        new_macroz: new_macroz {
+        new_macro: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
-            label = "NEW_MACROZ";
+            bindings = <&to 0 &kp>;
+            label = "NEW_MACRO";
         };
     };
 
@@ -176,8 +176,8 @@
 
         layer_7 {
             bindings = <
-&to 0  &to 0   &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&to 0  &to 0   &trans  &kp A   &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&to 0  &to 0   &to 0   &trans  &trans                      &trans  &trans    &trans    &trans    &trans
+&to 0  &to 0   &trans  &to 0   &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
 &to 0  &to 0   &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB4  &trans    &mkp MB5  &trans
 &to 0  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
