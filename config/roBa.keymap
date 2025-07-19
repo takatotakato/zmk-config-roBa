@@ -70,6 +70,27 @@
 
             label = "MKP_EXIT_AML";
         };
+
+        new_macroq: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Q &to 0>;
+            label = "NEW_MACRO";
+        };
+
+        new_macroa: new_macroa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &to 0>;
+            label = "NEW_MACROA";
+        };
+
+        new_macroz: new_macroz {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "NEW_MACROZ";
+        };
     };
 
     behaviors {
@@ -155,10 +176,10 @@
 
         layer_7 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &kp A   &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB4  &trans    &mkp MB5  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&to 0  &to 0   &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
+&to 0  &to 0   &trans  &kp A   &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&to 0  &to 0   &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB4  &trans    &mkp MB5  &trans
+&to 0  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
         };
     };
